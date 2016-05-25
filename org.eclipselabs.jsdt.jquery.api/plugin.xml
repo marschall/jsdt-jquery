@@ -52,12 +52,20 @@
             id="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_1.11">
       </JsGlobalScopeContainerInitializer>
       <JsGlobalScopeContainerInitializer
+            class="org.eclipselabs.jsdt.jquery.api.js.JQuery111ConflictGlobalScopeContainerInitializer"
+            id="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_1.12">
+      </JsGlobalScopeContainerInitializer>
+      <JsGlobalScopeContainerInitializer
             class="org.eclipselabs.jsdt.jquery.api.js.JQuery20ConflictGlobalScopeContainerInitializer"
             id="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_2.0">
       </JsGlobalScopeContainerInitializer>
       <JsGlobalScopeContainerInitializer
             class="org.eclipselabs.jsdt.jquery.api.js.JQuery21ConflictGlobalScopeContainerInitializer"
             id="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_2.1">
+      </JsGlobalScopeContainerInitializer>
+      <JsGlobalScopeContainerInitializer
+            class="org.eclipselabs.jsdt.jquery.api.js.JQuery22ConflictGlobalScopeContainerInitializer"
+            id="org.eclipselabs.jsdt.jquery.core.CoflictLibrary_2.2">
       </JsGlobalScopeContainerInitializer>
       <JsGlobalScopeContainerInitializer
             class="org.eclipselabs.jsdt.jquery.api.js.JQuery30ConflictGlobalScopeContainerInitializer"
@@ -112,12 +120,20 @@
             id="org.eclipselabs.jsdt.jquery.core.NoCoflictLibrary_1.11">
       </JsGlobalScopeContainerInitializer>
       <JsGlobalScopeContainerInitializer
+            class="org.eclipselabs.jsdt.jquery.api.js.JQuery111NoConflictGlobalScopeContainerInitializer"
+            id="org.eclipselabs.jsdt.jquery.core.NoCoflictLibrary_1.12">
+      </JsGlobalScopeContainerInitializer>
+      <JsGlobalScopeContainerInitializer
             class="org.eclipselabs.jsdt.jquery.api.js.JQuery20NoConflictGlobalScopeContainerInitializer"
             id="org.eclipselabs.jsdt.jquery.core.NoCoflictLibrary_2.0">
       </JsGlobalScopeContainerInitializer>
       <JsGlobalScopeContainerInitializer
             class="org.eclipselabs.jsdt.jquery.api.js.JQuery21NoConflictGlobalScopeContainerInitializer"
             id="org.eclipselabs.jsdt.jquery.core.NoCoflictLibrary_2.1">
+      </JsGlobalScopeContainerInitializer>
+      <JsGlobalScopeContainerInitializer
+            class="org.eclipselabs.jsdt.jquery.api.js.JQuery22NoConflictGlobalScopeContainerInitializer"
+            id="org.eclipselabs.jsdt.jquery.core.NoCoflictLibrary_2.2">
       </JsGlobalScopeContainerInitializer>
       <JsGlobalScopeContainerInitializer
             class="org.eclipselabs.jsdt.jquery.api.js.JQuery30NoConflictGlobalScopeContainerInitializer"
