@@ -1,0 +1,81 @@
+/*
+ * *****************************************************************************
+ * Copyright (c) 2011 Philippe Marschall and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Philippe Marschall
+ * *****************************************************************************
+ */
+package org.eclipselabs.jsdt.jquery.core.model;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+
+import org.eclipselabs.jsdt.jquery.api.Version;
+import org.eclipselabs.jsdt.jquery.core.api.JQueryDocumentation;
+
+public class Generator {
+
+
+  public static void main(String[] args) throws IOException {
+    long start = System.currentTimeMillis();
+    DocumentationParser parser = new DocumentationParser();
+    InputStream input = DocumentationParser.class.getClassLoader().getResourceAsStream("api.xml");
+    JQueryDocumentation documentation;
+    try {
+      documentation = parser.parse(input);
+    } catch (DocumentationParseException e) {
+      e.printStackTrace(System.err);
+      return;
+    }
+
+
+    writeJsDoc(documentation);
+    writeCallbackMethods(documentation);
+    writeJqXhrCallbackMethods(documentation);
+
+    long end = System.currentTimeMillis();
+    System.out.printf("finished generating documentation in %dms%n", end - start);
+  }
+
+  static void writeCallbackMethods(JQueryDocumentation documentation) throws IOException {
+    CallbackMethodGenerator generator = new CallbackMethodGenerator();
+    File parent = new File(new File(new File(new File(new File(new File(new File(new File(new File(".."), "org.eclipselabs.jsdt.jquery.api"), "src"), "org"), "eclipselabs"), "jsdt"), "jquery"), "api"), "infer");
+    OutputStream outputStream = new FileOutputStream(new File(parent, "JQueryCallbackMethodsGenerator.java"));
+    OutputStream buffered = new BufferedOutputStream(outputStream);
+    generator.write(documentation.getMembers(), new OutputStreamWriter(buffered, "US-ASCII"));
+  }
+  
+  static void writeJqXhrCallbackMethods(JQueryDocumentation documentation) throws IOException {
+    XhrGenerator generator = new XhrGenerator();
+    File parent = new File(new File(new File(new File(new File(new File(new File(new File(new File(".."), "org.eclipselabs.jsdt.jquery.api"), "src"), "org"), "eclipselabs"), "jsdt"), "jquery"), "api"), "infer");
+    OutputStream outputStream = new FileOutputStream(new File(parent, "JQueryJqXhrMethodsGenerator.java"));
+    OutputStream buffered = new BufferedOutputStream(outputStream);
+    generator.write(documentation.getMembers(), new OutputStreamWriter(buffered, "US-ASCII"));
+  }
+
+  static void writeJsDoc(JQueryDocumentation documentation) throws IOException {
+    JSDocGenerator generator = new JSDocGenerator();
+
+    File parent = new File(new File(new File(".."), "org.eclipselabs.jsdt.jquery.api"), "libraries");
+    for (Version version : documentation.getAllVersions()) {
+      OutputStream outputStream = new FileOutputStream(new File(parent, "jquery-doc-" + version.toString() + ".js"));
+      OutputStream buffered = new BufferedOutputStream(outputStream);
+      generator.write(documentation.getMembers(), false, new OutputStreamWriter(buffered, "US-ASCII"), version);
+
+      outputStream = new FileOutputStream(new File(parent, "jquery-doc-noconflict-" + version.toString() + ".js"));
+      buffered = new BufferedOutputStream(outputStream);
+      generator.write(documentation.getMembers(), true, new OutputStreamWriter(buffered, "US-ASCII"), version);
+    }
+  }
+
+}
