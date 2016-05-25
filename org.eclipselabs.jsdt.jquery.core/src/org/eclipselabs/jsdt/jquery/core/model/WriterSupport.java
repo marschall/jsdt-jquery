@@ -14,7 +14,6 @@ package org.eclipselabs.jsdt.jquery.core.model;
 
 import java.io.IOException;
 import java.io.Writer;
-import java.util.Collection;
 
 import org.eclipselabs.jsdt.jquery.core.api.JQueryMember;
 import org.eclipselabs.jsdt.jquery.core.api.MemberVisitor;

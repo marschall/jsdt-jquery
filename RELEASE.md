@@ -1,8 +1,10 @@
-Preparation:
+Preparation
+===========
 - check out the releases folder somewhere https://svn.codespot.com/a/eclipselabs.org/jsdt-jquery/releases
 - change pom.xml to point there
 
 Execution
+=========
 - remove .qualifier from MANIFEST.MF
 - remove .qualifier from feature.xml (2 times)
 - commit
