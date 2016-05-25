@@ -24,14 +24,14 @@ import org.osgi.framework.BundleContext;
 
 public final class JQueryApiPlugin extends Plugin {
 
-  static final int MAX_MINOR_1 = 11;
-  
-  static final int MAX_MINOR_2 = 1;
-  
+  static final int MAX_MINOR_1 = 12;
+
+  static final int MAX_MINOR_2 = 2;
+
   static final int MAX_MINOR_3 = 0;
 
   static final List<Version> ALL_VERSIONS;
-  
+
   static final Map<String, Version> ALL_VERSIONS_MAP;
 
   public static final Version MAX_VERSION;

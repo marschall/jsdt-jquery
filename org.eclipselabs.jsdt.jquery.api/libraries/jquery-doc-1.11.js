@@ -72,7 +72,7 @@ attr: function(attributeName) {},
  * Set one or more attributes for the set of matched elements.
  * @since 1.0
  * @param {String} attributeName The name of the attribute to set.
- * @param {Number} value A value to set for the attribute.
+ * @param {String} value A value to set for the attribute.
  * @returns {jQueryObject}
  */
 attr: function(attributeName, value) {},
@@ -165,7 +165,7 @@ css: function(propertyName) {},
  * Set one or more CSS properties for the set of matched elements.
  * @since 1.0
  * @param {String} propertyName A CSS property name.
- * @param {Number} value A value to set for the property.
+ * @param {String} value A value to set for the property.
  * @returns {jQueryObject}
  */
 css: function(propertyName, value) {},
@@ -275,7 +275,7 @@ fadeOut: function(duration, complete) {},
 /**
  * Adjust the opacity of the matched elements.
  * @since 1.0
- * @param {Number} duration A string or number determining how long the animation will run.
+ * @param {String} duration A string or number determining how long the animation will run.
  * @param {Number} opacity A number between 0 and 1 denoting the target opacity.
  * @param {Function} [complete] A function to call once the animation is complete.
  * @returns {jQueryObject}
@@ -374,7 +374,7 @@ height: function() {},
 /**
  * Set the CSS height of every matched element.
  * @since 1.0
- * @param {Number} value An integer representing the number of pixels, or an integer with an optional unit of measure appended (as a string).
+ * @param {String} value An integer representing the number of pixels, or an integer with an optional unit of measure appended (as a string).
  * @returns {jQueryObject}
  */
 height: function(value) {},
@@ -427,7 +427,7 @@ innerHeight: function() {},
 /**
  * Set the CSS inner height of each element in the set of matched elements.
  * @since 1.8
- * @param {Number} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
+ * @param {String} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
  * @returns {jQueryObject}
  */
 innerHeight: function(value) {},
@@ -440,7 +440,7 @@ innerWidth: function() {},
 /**
  * Set the CSS inner width of each element in the set of matched elements.
  * @since 1.8
- * @param {Number} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
+ * @param {String} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
  * @returns {jQueryObject}
  */
 innerWidth: function(value) {},
@@ -537,7 +537,7 @@ load: function(handler) {},
  * Load data from the server and place the returned HTML into the matched element.
  * @since 1.0
  * @param {String} url A string containing the URL to which the request is sent.
- * @param {PlainObject} [data] A plain object or string that is sent to the server with the request.
+ * @param {String} [data] A plain object or string that is sent to the server with the request.
  * @param {Function} [complete] A callback function that is executed when the request completes.
  * @returns {jQueryObject}
  */
@@ -684,7 +684,7 @@ outerHeight: function(includeMargin) {},
 /**
  * Set the CSS outer Height of each element in the set of matched elements.
  * @since 1.8
- * @param {Number} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
+ * @param {String} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
  * @returns {jQueryObject}
  */
 outerHeight: function(value) {},
@@ -698,7 +698,7 @@ outerWidth: function(includeMargin) {},
 /**
  * Set the CSS outer width of each element in the set of matched elements.
  * @since 1.8
- * @param {Number} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
+ * @param {String} value A number representing the number of pixels, or a number along with an optional unit of measure appended (as a string).
  * @returns {jQueryObject}
  */
 outerWidth: function(value) {},
@@ -1002,7 +1002,7 @@ text: function() {},
 /**
  * Set the content of each element in the set of matched elements to the specified text.
  * @since 1.0
- * @param {Number} text The text to set as the content of each matched element. When Number or Boolean is supplied, it will be converted to a String representation.
+ * @param {Boolean} text The text to set as the content of each matched element. When Number or Boolean is supplied, it will be converted to a String representation.
  * @returns {jQueryObject}
  */
 text: function(text) {},
@@ -1079,7 +1079,7 @@ val: function() {},
 /**
  * Set the value of each element in the set of matched elements.
  * @since 1.0
- * @param {Number} value A string of text, a number, or an array of strings corresponding to the value of each matched element to set as selected/checked.
+ * @param {Array} value A string of text, a number, or an array of strings corresponding to the value of each matched element to set as selected/checked.
  * @returns {jQueryObject}
  */
 val: function(value) {},
@@ -1092,7 +1092,7 @@ width: function() {},
 /**
  * Set the CSS width of each element in the set of matched elements.
  * @since 1.0
- * @param {Number} value An integer representing the number of pixels, or an integer along with an optional unit of measure appended (as a string).
+ * @param {String} value An integer representing the number of pixels, or an integer along with an optional unit of measure appended (as a string).
  * @returns {jQueryObject}
  */
 width: function(value) {},
